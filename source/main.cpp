@@ -1,10 +1,11 @@
 #include "main.h"
+
 //--------------------------------------------------------------
 int main()
 {
-	Resizer* programme; 
+	Resizer* programme;
 	programme = new Resizer();
-	programme->Run();  
+	programme->Run();
 	delete programme;
 	return 0;
 }
@@ -19,10 +20,9 @@ Resizer::Resizer() : BApplication("application/x-vnd.TAResizer")
 	Mouse->Run();
 }
 //--------------------------------------------------------------
-void Resizer::RefsReceived(BMessage *message) 
-{ 
+void Resizer::RefsReceived(BMessage *message)
+{
     entry_ref ref;
-    
 	// get the ref from the message
     if(message->FindRef("refs", &ref) == B_OK)
     {
